@@ -9,6 +9,7 @@ let  livingroom = new Room("living room", "Large dusty couch and coffee table in
 let chairs = new Item("chairs", "Three small polished wooden chairs, with a small gold key laid on one")
 let couch = new Item("couch", "an L shaped couch with grey seats with rips in almost all of them, nothing useful")
 let diningroom = new Room("dining room", "theres a marble bar table with four stools around it, theres ")
+
 let bar = new Item("marble bar", "rectangle marble bar with chips in it and four one stool on each side")
 // Put them in their spots
 
