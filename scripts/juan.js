@@ -1,17 +1,19 @@
-
-
 alert("Loading main.js!"); //Don't change this line
 player = new Player()
 
+console.log("Loading game");
 //Create your objects
 let hallway = new Room("dusty hallway", "clouds of dust kick up with every step.");
-let vase = new Item("vase", "made of blue glass, chipped on top. Filled with a dark liquid.")
+let door = new Item("door", "made of old wood, chipped on top. has dryed up red satains.")
 let room = new Room("dark room", "It is dark");
-let bedroom = new Room('bedroom', 'It is a bedroom')
-var key = new Item('rusty key', 'It is a large, heavy brass key.')
-let dungeon = new Room('dungeon', 'Long, rusty chains hang from hooks on the walls. The floor is damp, and the room smells of mold and must.')
-let door = new Door('door')
-door.addItem(room);
+let lights = new Item ('lights', 'It is slowly getting brighter.')
+let key = new Item('key', 'long key around 5 inches. has a diamond shape at the end.')
+let bedroom = new Room("bedroom", "has red stains on the bed, and has a dusty carpet" )
+let carpet = new item("carpet", "has two holes and is very colorful, you lift up the carpet and find a key and a trap door.")
+let trapdoor = new item("trapdoor","you open the trapdoor with the key and has a ladder and you end up in a secret room.")
+let secret room = new room("secret room", "the secret room has a gun with losts of ammo, also has a lot of water and can food.")
+let gun = new item("gun","the gun is heavy with no bullets in it." )
+
 
 //1.) Create the function & the search term
 let jumpaction = /jump/;
@@ -47,6 +49,8 @@ Item.prototype.eat = function() {
   addLine("You ate the " + this.name);
 }
 
+//Add the function to the action list
+
 
 
 // Put them in their spots
@@ -55,7 +59,6 @@ hallway.addItem(room);
 hallway.addItem(key);
 room.addItem(bedroom);
 room.addItem(hallway);
-hallway.addItem(door);
 
 
 player.move(hallway)
